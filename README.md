@@ -1,4 +1,4 @@
-# App Nativo Notícias do Futebol Feminino
+# App Android Nativo Notícias do Futebol Feminino
 ### App de Notícias Sobre Futebol Feminino com Android Jetpack e Java
 
 Este repositório é organizados em branches que represetam implementações realizadas durante o Bootcamp Santander DIO 2022 nas seguintes aulas:
