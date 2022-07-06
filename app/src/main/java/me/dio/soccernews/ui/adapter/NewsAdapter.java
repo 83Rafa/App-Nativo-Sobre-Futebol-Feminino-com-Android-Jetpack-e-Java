@@ -1,9 +1,11 @@
 package me.dio.soccernews.ui.adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,6 +14,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import me.dio.soccernews.R;
 import me.dio.soccernews.databinding.NewsItemBinding;
 import me.dio.soccernews.domain.News;
 
@@ -34,6 +37,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Context context = holder.itemView.getContext();
         News news = this.news.get(position);
         holder.binding.tvTitle.setText(news.title);
         holder.binding.tvDescription.setText(news.description);
@@ -53,17 +57,14 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             i.putExtra(Intent.EXTRA_TEXT, news.link);
             holder.itemView.getContext().startActivity(Intent.createChooser(i, "Compartilhar"));
         });
-        // Implementação de funcionalidade de "Favoritar". O eventro será instanciado pelo fragment
+        // Implementção de funcionalidade de "Favoritar". O eventro será instanciado pelo fragment
         holder.binding.ivFavorite.setOnClickListener(view -> {
             news.favorite = !news.favorite;
             this.favoriteListener.onFavorite(news);
             notifyItemChanged(position);
         });
-        if (news.favorite) {
-
-        } else {
-
-        }
+        int favoriteColor = news.favorite ? R.color.favorite_active : R.color.favorite_inactive;
+        holder.binding.ivFavorite.setColorFilter(context.getResources().getColor(favoriteColor));
     }
 
     @Override
