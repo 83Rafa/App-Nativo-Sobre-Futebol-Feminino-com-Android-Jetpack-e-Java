@@ -44,6 +44,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     // https://github.com/square/picasso/
     implementation 'com.squareup.picasso:picasso:2.8'
+    // https://developer.android.com/training/data-storage/room?hl=pt-br
+    implementation "androidx.room:room-runtime:2.4.2"
+    annotationProcessor "androidx.room:room-compiler:2.4.2"
 
     testImplementation 'junit:junit:4.13.2'
 
