@@ -8,3 +8,6 @@ Este repositório é organizados em branches que represetam implementações rea
  
 2. Anstraindo Domínio de Apps Nativos
  - [release/abstraindo-dominio-de-apps-android-nativos-com-java](https://github.com/83Rafa/App-Nativo-Sobre-Futebol-Feminino-com-Android-Jetpack-e-Java/tree/release/abstraindo-dominio-de-apps-android-nativos-com-java)
+
+3. Consumo de APIs e Persistência de Dados Locais em Apps Android (Icluídos: Firebase Analytics, Crashlytics e Performance)
+ - [consumo-de-apis-e-persistencia-de-dados-locais-em-apps-android](https://github.com/83Rafa/App-Nativo-Sobre-Futebol-Feminino-com-Android-Jetpack-e-Java/tree/release/consumo-de-apis-e-persistencia-de-dados-locais-em-apps-android)
